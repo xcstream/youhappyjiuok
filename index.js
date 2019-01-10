@@ -22,3 +22,4 @@ app.use(bodyParser.json({ type: 'application/json' }))
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.listen(10000)
+console.log('http://localhost:10000')
