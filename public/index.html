@@ -40,8 +40,9 @@
 
     canvas{
         background-image: linear-gradient(#1dd2ac 0%, #2e069e 100%);
-        width: 100%;
-        height:100%;
+        /*width: 100%;*/
+        /*height:100%;*/
+
     }
 
     #wrapper{
@@ -89,6 +90,13 @@
 <canvas id="c" height="300" width="480"></canvas>
 
 <script>
+    window.onresize= function(){
+        document.getElementById('c').width=window.innerWidth
+        document.getElementById('c').height=window.innerHeight
+
+    }
+    document.getElementById('c').width=window.innerWidth
+    document.getElementById('c').height=window.innerHeight
     Util = {};
     Util.random = function(min, max) {
         return min + Math.random() * (max - min);
@@ -191,11 +199,14 @@
     }
     // init canvas
     let canvas = document.getElementById("c");
-    (ctx = canvas.getContext("2d")),
-        (H = canvas.height = 300),
-        (W = canvas.width = 480);
-    ctx.lineCap = "round";
     canvas.addEventListener("mousemove", event => mousemove(event), false);
+
+
+
+    (ctx = canvas.getContext("2d")),
+        (H = canvas.height ),
+        (W = canvas.width );
+    ctx.lineCap = "round";
 
     let cursor = new Vector(W / 2, H / 1.2);
 
