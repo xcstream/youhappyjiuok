@@ -5,12 +5,41 @@
 </head>
 
 <body>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .menu {
+        width: 30vw;
+        height: 20vw;
+        object-fit: cover;
+        position: absolute;
+        top:2vw;
+        border-radius: 2vw;
+        box-shadow: 2px 2px 2vw #999999;
+    }
+    .menutext {
+        text-shadow:5px 2px 6px #000
+    }
+    .menu:hover{
+        box-shadow: 1px 1px 1vw #999999;
+    }
 
+
+</style>
 <div>
-    <a href="https://chat.youhappyjiuok.com" target="_blank">聊天室</a>
+    <a href="https://chat.youhappyjiuok.com" target="_blank">
+        <img class="menu" src="bchat.png" style="left:10vw">
+        <div class="menutext" style="position: absolute;left:11vw;top:18vw;font-size: 3vw;color: white">聊天室</div>
+    </a>
 </div>
 <div>
-    <a href="https://xcstream.github.io/evalcode/" target="_blank">在线代码运行</a>
+    <a href="https://xcstream.github.io/evalcode/" target="_blank">
+        <img class="menu" src="bcode.jpg" style="left:50vw">
+        <div class="menutext" style="position: absolute;left:51vw;top:18vw;font-size: 3vw;color: white">代码运行</div>
+
+    </a>
 </div>
 </body>
 
